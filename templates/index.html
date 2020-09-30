@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Desies Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<style>
+    #main-footer
+    {
+      color: #FFFFFF;
+      font-family: "Segoe UI";
+      background: #2B2B2B;
+      text-align: center;
+      margin-top: 125px;
+      padding: 16px;
+      bottom: 8px;
+    }
+     body {
+        background-image: url("new3.jpg");
+        background-color: #cccccc;
+    }
+</style>
+
+<body>
+
+<div class="container">
+    <form action="{{ url_for('predict')}} " method="POST">
+         <div class="form-group">
+             <label >Enter Age :
+                 <input type="number" id="first" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="age" placeholder="Age eg : 30">
+             </label>
+             </br>
+
+
+             <label>Enter Sex :</label>
+             <select class="form-control" id="second" name="sex">
+                 <option value="none">Select Your sex</option>
+                 <option value="male">Male</option>
+                 <option value="female">Female</option>
+             </select></br>
+
+             <label >Enter Chest Pain Type :</label>
+             <select class="form-control" id="third" name="cp">
+                 <option value="none">Select Chest Pain</option>
+                 <option value="Typical angina">Typical angina</option>
+                 <option value="Atypical angina">Atypical angina</option>
+                 <option value="Non-anginal pain">Non-anginal pain</option>
+                 <option value="Asymptomatic">Asymptomatic</option>
+
+             </select></br>
+
+             <label >Enter Trestbps :
+                 <input type="number" id="forth"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="trestbps">
+             </label></br>
+
+             <label >Enter cholestoral :
+                 <input type="number" id="fifth" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="cholestoral">
+             </label></br>
+
+             <label >Enter fasting blood sugar :</label>
+                <select class="form-control" id="sixth" name="fasting_blood_sugar">
+                 <option value="none">Select fasting blood sugar</option>
+                 <option value="<_120_mg/dl"> less then 120 mg/dl</option>
+                 <option value=">_120_mg/dl"> > 120 mg/dl</option>
+                </select></br>
+
+             <label >Enter Resting electrocardiographic results :</label>
+                <select class="form-control" id="seven" name="resting_electr">
+                 <option value="none">Select resting electrocardiographic results</option>
+                 <option value=0> Normal</option>
+                 <option value=1>ST elevation or depression of > 0.05 mV</option>
+                    <option value=2>definite left ventricular hypertrophy</option>
+                </select></br>
+
+
+             <label >Enter Maximum heart rate achieved :
+                 <input type="number" id="eight" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="thalach">
+             </label></br>
+
+            <label >Exercise induced angina (Yes=1 & No=0):
+                <input type="number" id="ninth" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="exang" placeholder="if Yes=1 if No=0">
+            </label></br>
+
+             <label >ST depression induced by exercise relative to rest:
+                <input type="number" id="tenth" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="oldpeak " placeholder="eg : 2.6  ">
+            </label></br>
+
+
+             <label >Enter slope of the peak exercise ST segment :</label>
+                <select class="form-control" id="eleventh" name="slope">
+                    <option value="none">Select slope of the peak </option>
+                     <option value="Upsloping">Upsloping</option>
+                     <option value="Flat">Flat</option>
+                     <option value="Downsloping">Downsloping</option>
+                </select></br>
+
+             <label>ST depression induced by exercise relative to rest:
+                <input type="number" id="twelve" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="ca" placeholder="number of major vessels (0-4)">
+            </label></br>
+
+            <label>Enter slope of the peak exercise ST segment :
+                  <input type="number" id="thirteen" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="thal" placeholder="slope of the peak exercise range:(0-3)">
+            </label></br>
+
+
+             <input class="btn btn-primary" type="submit" value="Submit">
+
+
+         </div>
+
+    </form>
+</div>
+
+</body>
+</html>
+
+
