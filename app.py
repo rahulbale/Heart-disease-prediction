@@ -3,10 +3,11 @@ import numpy as np
 import pickle
 import sklearn
 
+model=pickle.loads(open('heart_log_modal.pkl','rb'))
 
 app=Flask(__name__)
 
-model=pickle.loads(open('heart_log_modal.pkl','rb'))
+
 
 @app.route("/")
 def home():
