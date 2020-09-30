@@ -8,7 +8,7 @@ app=Flask(__name__)
 
 model=pickle.loads(open('heart_log_modal.pkl','rb'))
 
-@app.route("/",method=['GET'])
+@app.route("/")
 def home():
     return render_template('index.html')
 
